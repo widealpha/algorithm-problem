@@ -5,6 +5,10 @@ import com.google.gson.Gson;
 public class DataUtil {
     static Gson gson = new Gson();
 
+    public static String[] toStringArray(String s) {
+        return gson.fromJson(s, String[].class);
+    }
+
     public static int[] toIntArray(String s) {
         return gson.fromJson(s, int[].class);
     }
